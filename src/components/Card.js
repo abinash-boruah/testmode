@@ -8,5 +8,5 @@ const CardComponent = ({header, value}) => (
           <Card.Title>{ value }</Card.Title>
         </Card.Body>
     </Card>
-);
+)
 export default CardComponent

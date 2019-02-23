@@ -1,8 +1,8 @@
-import React from 'react';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { Link } from "react-router-dom";
-import SideBarLink from "./SideBarLink";
+import React from 'react'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import { Link } from "react-router-dom"
+import SideBarLink from "./SideBarLink"
 
 const SideBar = () => (
   <div style={{ paddingLeft: '1em'}}>
@@ -13,14 +13,14 @@ const SideBar = () => (
     </Navbar>
     <div>
     <Nav className = "flex-column">
-     <ul>
-     <Nav.Link href="/home" onSelect="">Active</Nav.Link>
-     <Nav.Link eventKey="link-1">Link</Nav.Link>
-     <Nav.Link eventKey="link-2">Link</Nav.Link>
-     </ul>  
-     </Nav>
+      <SideBarLink icon="heart" text="Blog post"/>
+      <SideBarLink icon="search" text="Blog post"/>
+      <SideBarLink icon="heart" text="Blog post"/>
+      <SideBarLink icon="heart" text="Blog post"/>
+    </Nav>
     </div>
+
   </div>
-);
+)
 
 export default SideBar
