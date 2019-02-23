@@ -19,14 +19,14 @@ class App extends Component {
     return (
         <Router>
           <Row style={{margin: '0'}}>
-            <Col xs={2}>
+            <Col xs={2} style={{ padding: '0'}}>
               <SideBar/>
             </Col>
-            <Col xs={10}>
+            <Col xs={10} style={{ padding: '0'}}>
               <NavBar/> 
               <Route exact path="/" component={Home} />
               <Route path="/tests" component={Tests} />
-              <Route path="/tests/:testid" component={Test} />
+              <Route path="/test/:testid" component={Test} />
               <Route path="/create" component={CreatePage} />
             </Col>
           </Row>

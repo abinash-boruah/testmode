@@ -1,8 +1,9 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container'
 
 const CreatePage = () => (
-    <div>
+    <Container>
       <h2>CreatePage</h2>
-    </div>
+    </Container>
 );
 export default CreatePage

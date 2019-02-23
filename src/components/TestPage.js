@@ -1,10 +1,12 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container'
 
 const Test = ({ match }) => (
-    <div>
+    <Container>
+        as
         Test ID:
       <h2>{ match.params.testid }</h2>
-    </div>
+    </Container>
 );
 
 export default Test

@@ -1,22 +1,15 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Container from 'react-bootstrap/Container'
 
 
 const Tests = ({ match }) => (
-    <div>
+    <Container>
       <h2>Tests</h2>
-         <li> <Link to="/tests/asdasd">Test 1</Link></li> 
-         <li><Link to="/tests/ppp">Test asd1</Link></li> 
-         <li><Link to="/tests/asldkljasld">Test asdasd1</Link></li> 
-    </div>
+      <li><Link to="/test/asdasd">Test 1</Link></li> 
+      <li><Link to="/test/ppp">Test asd1</Link></li> 
+      <li><Link to="/test/asldkljasld">Test asdasd1</Link></li> 
+    </Container>
 );
 
-/*
-const Tests = props => (
-    <div>
-      <h2>Tests</h2>
-
-      {JSON.stringify(props.match)}
-    </div>
-);*/
 export default Tests

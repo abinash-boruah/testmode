@@ -4,8 +4,14 @@ import Navbar from 'react-bootstrap/Navbar'
 import { Link } from "react-router-dom"
 import SideBarLink from "./SideBarLink"
 
+const sideBarStyle = {
+  paddingLeft: '1em',
+  boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+  height: '100vh'
+}
+
 const SideBar = () => (
-  <div style={{ paddingLeft: '1em'}}>
+  <div style={sideBarStyle}>
     <Navbar>
     <Nav className="mr-auto">
       <Link style={{ padding: '.5rem 1rem' }} to="/">TestMode</Link>
