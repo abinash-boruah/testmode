@@ -11,7 +11,7 @@ import Tests from './components/tests/TestsPage';
 import Test from './components/tests/TestPage';
 import Home from './components/Home';
 import CreatePage from './components/CreatePage';
-import SideBar from './components/SideBar';
+import SideBar from './components/sidebar/SideBar';
 import NavBar from './components/NavBar'
 
 class App extends Component {

@@ -7,7 +7,6 @@ import Button from 'react-bootstrap/Button'
 
 const Tests = ({ match }) => (
     <Container>
-      <h2>Tests</h2>
       <Table  bordered hover size="sm">
        <thead>
         <tr>
