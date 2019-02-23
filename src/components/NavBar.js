@@ -16,9 +16,5 @@ const NavBar = () => (
     </Navbar.Collapse>
   </Navbar>
 );
+
 export default NavBar
-
-
-          //<Link to="/tests">Create</Link>
-          //<Nav.Link href="/tests">Tests</Nav.Link>
-          //<Link to="/tests"> <Nav.Text>Tests</Nav.Text> </Link>

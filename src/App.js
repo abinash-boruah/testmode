@@ -18,11 +18,11 @@ class App extends Component {
   render() {
     return (
         <Router>
-          <Row>
-            <Col style={{ padding: '0'}} lg={2}>
+          <Row style={{margin: '0'}}>
+            <Col xs={2}>
               <SideBar/>
             </Col>
-            <Col style={{ padding: '0' }} lg={10}>
+            <Col xs={10}>
               <NavBar/> 
               <Route exact path="/" component={Home} />
               <Route path="/tests" component={Tests} />

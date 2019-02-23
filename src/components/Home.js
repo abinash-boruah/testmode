@@ -1,10 +1,17 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+import Card from './Card'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const Home = () => (
-    <div>
-      <h2>Home</h2>
-      <Button>asjdhasds</Button>
-    </div>
+    <Container fluid={true}>
+      <h3>TestMode Overview</h3>
+      <Row>
+         <Col> <Card header="Total tests" value="34"/> </Col>
+         <Col> <Card header="Average Student Score" value="34"/> </Col>
+         <Col> <Card header="How to use TestMode" value="jkj"/> </Col>
+      </Row>
+    </Container>
 );
 export default Home
