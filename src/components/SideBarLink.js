@@ -5,6 +5,6 @@ const sideBarLinkStyle = {
 }
 
 const SideBarLink = ({icon, text}) => (
-     <div style={sideBarLinkStyle}> <i class={"icon ion-md-"+icon}></i> {text}</div>
+     <div style={sideBarLinkStyle}> <i className={"icon ion-md-"+icon}></i> {text}</div>
 )
 export default SideBarLink

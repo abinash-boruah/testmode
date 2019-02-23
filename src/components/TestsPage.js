@@ -37,7 +37,7 @@ const Tests = ({ match }) => (
          <td><Button variant="primary">Edit</Button> <Button variant="danger">Delete</Button></td> 
         </tr>
       </tbody>
-      </Table>;
+      </Table>
     </Container>
 );
 
