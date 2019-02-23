@@ -7,8 +7,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 // import custom components
-import Tests from './components/TestsPage';
-import Test from './components/TestPage';
+import Tests from './components/tests/TestsPage';
+import Test from './components/tests/TestPage';
 import Home from './components/Home';
 import CreatePage from './components/CreatePage';
 import SideBar from './components/SideBar';
