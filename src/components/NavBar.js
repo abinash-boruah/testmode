@@ -1,19 +1,24 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
+// import react components
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 const NavBar = () => (
-<Navbar bg="light" variant ="light" expand="lg" sticky="top">
-<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
-      <Nav.Link></Nav.Link>
-      <Nav.Link>></Nav.Link>
-    </Nav>
-          
-  </Navbar.Collapse>
-</Navbar>
+  <Navbar bg="light" variant ="light" expand="lg" sticky="top">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Link style={{ padding: '.5rem 1rem' }} to="/create">Create</Link>
+          <Link style={{ padding: '.5rem 1rem' }} to="/tests">Tests</Link>
+        </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 );
 export default NavBar
 
+
+          //<Link to="/tests">Create</Link>
+          //<Nav.Link href="/tests">Tests</Nav.Link>
+          //<Link to="/tests"> <Nav.Text>Tests</Nav.Text> </Link>

@@ -1,17 +1,27 @@
 import React from 'react';
+import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav'
-
+import { Link } from "react-router-dom";
 
 const SideBar = () => (
-<Navbar bg ="dark" variant ="light" expand ="lg" >
- 
- <Nav fill variant="tabs" defaultActiveKey="/home" className="flex-column">
-  <Nav.Link href="/home">Active</Nav.Link>
-  <Nav.Link eventKey="link-1">Link</Nav.Link>
-  <Nav.Link eventKey="link-2">Link</Nav.Link>
-</Nav>
- 
-</Navbar>
+  <div style={{ paddingLeft: '1em'}}>
+    <Navbar>
+    <Nav className="mr-auto">
+      <Link style={{ padding: '.5rem 1rem' }} to="/">TestMode</Link>
+    </Nav>
+    </Navbar>
+    <div>
+      <ul>
+        <li>some link</li>
+        <li>some link</li>
+        <li>some link</li>
+        <li>some link</li>
+        <li>some link</li>
+        <li>some link</li>
+        <li>some link</li>
+      </ul>
+    </div>
+  </div>
 );
+
 export default SideBar
