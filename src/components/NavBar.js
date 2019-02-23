@@ -6,12 +6,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 const NavBar = () => (
-  <Navbar bg="light" variant ="light" expand="lg" sticky="top">
+  <Navbar style={{background: 'linear-gradient(120deg, #5983e8, #00e4d0)' }} bg="light" variant ="light" expand="lg" sticky="top">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Link style={{ padding: '.5rem 1rem' }} to="/create">Create</Link>
-          <Link style={{ padding: '.5rem 1rem' }} to="/tests">Tests</Link>
+          <Link style={{ padding: '.5rem 1rem', color: 'white' }} to="/create">Create</Link>
+          <Link style={{ padding: '.5rem 1rem', color: 'white' }} to="/tests">Tests</Link>
         </Nav>
     </Navbar.Collapse>
   </Navbar>

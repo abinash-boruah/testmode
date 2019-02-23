@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom";
+import SideBarLink from "./SideBarLink";
 
 const SideBar = () => (
   <div style={{ paddingLeft: '1em'}}>
@@ -11,15 +12,13 @@ const SideBar = () => (
     </Nav>
     </Navbar>
     <div>
-      <ul>
-        <li>some link</li>
-        <li>some link</li>
-        <li>some link</li>
-        <li>some link</li>
-        <li>some link</li>
-        <li>some link</li>
-        <li>some link</li>
-      </ul>
+    <Nav className = "flex-column">
+     <ul>
+     <Nav.Link href="/home" onSelect="">Active</Nav.Link>
+     <Nav.Link eventKey="link-1">Link</Nav.Link>
+     <Nav.Link eventKey="link-2">Link</Nav.Link>
+     </ul>  
+     </Nav>
     </div>
   </div>
 );
