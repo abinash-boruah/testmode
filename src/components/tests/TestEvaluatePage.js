@@ -55,48 +55,47 @@ class TestEvaluatePage extends Component{
            const studentData = this.state.studentData
            
            return (
-               <div>
-                 <Row>
-                   <Col style = {{textAlign: "right"}}>
-                    Filter
-                   </Col>  
-                   <Col xs lg = "auto">
-                     <Dropdown>
-                      <Dropdown.Toggle variant="success" id="dropdown-basic">
-                         Class
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Class 10</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Class 11</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">class 12</Dropdown.Item>
-                      </Dropdown.Menu>
-                      </Dropdown>
-                   </Col>
-                   <Col xs lg = "3">
-                   <Dropdown>
-                      <Dropdown.Toggle variant="success" id="dropdown-basic">
-                         Year
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">2010</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">2011</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">2012</Dropdown.Item>
-                      </Dropdown.Menu>
-                      </Dropdown>
-                   </Col>
-                 </Row>
-                 <Row>
+            <div>
+            <Row>
+              <Col style = {{textAlign: "right"}}>
+                 Filter
+              </Col>  
+              <Col xs lg = "auto">
+                 <Dropdown>
+                     <Dropdown.Toggle variant="success" id="dropdown-basic">
+                        Class
+                     </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                          <Dropdown.Item href="#/action-1">Class 10</Dropdown.Item>
+                          <Dropdown.Item href="#/action-2">Class 11</Dropdown.Item>
+                          <Dropdown.Item href="#/action-3">class 12</Dropdown.Item>
+                        </Dropdown.Menu>
+                 </Dropdown>
+               </Col>
+               <Col xs lg = "3">
+                 <Dropdown>
+                     <Dropdown.Toggle variant="success" id="dropdown-basic">
+                      Year
+                     </Dropdown.Toggle>
+                     <Dropdown.Menu>
+                           <Dropdown.Item href="#/action-1">2010</Dropdown.Item>
+                           <Dropdown.Item href="#/action-2">2011</Dropdown.Item>
+                           <Dropdown.Item href="#/action-3">2012</Dropdown.Item>
+                           </Dropdown.Menu>
+                     </Dropdown>
+                </Col>
+            </Row>
+            <Row>
                  <Table bordered hover lg = {4} style = {{marginTop:7,marginRight:7}}>
                   <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Student Name</th>
-                      <th>Score</th>
-                      <th>Evaluation</th>
-                      <th>Check</th>         
-                    </tr>
+                     <tr>
+                         <th>ID</th>
+                         <th>Student Name</th>
+                         <th>Score</th>
+                         <th>Evaluation</th>
+                         <th>Check</th>         
+                     </tr>
                    </thead>
-              
                    <tbody>
                      {studentData.map(s=>(
                        <tr>
@@ -109,8 +108,8 @@ class TestEvaluatePage extends Component{
                      ))}
                    </tbody>
                  </Table>
-                 </Row>       
-               </div>
+            </Row>       
+           </div>
            )
        }
        }
