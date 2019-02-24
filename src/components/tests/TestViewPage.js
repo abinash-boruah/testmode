@@ -7,36 +7,62 @@ import {Link} from 'react-router-dom'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-const TestViewPage = props => (
-    <div>
-    <Container>
-      <table bordered hover size="lg">
-       <thead>
-        <tr>
-         <th>ID</th>
-         <th>Questions</th>
-         <th>Marks</th>         
-        </tr>
-       </thead>
-       <tbody>
-        <tr>
-         <td>1</td>
-         <td>Test 1</td>
-         <td>3</td>
-        </tr>
-        <tr>
-         <td>2</td>
-         <td>Test 2</td>
-         <td>5</td>
-        </tr>
-        <tr>
-         <td>3</td>
-         <td>Test 3</td>
-         <td>6</td>
-        </tr>
-      </tbody>
-    </table>
-    </Container>
-    </div>
-)
+class TestViewPage extends Component{
+ constructor(){
+    super()
+    this.state = {
+        loading : false,
+        Data :
+          {
+            id : 1,
+           question : "What is your name?",
+           marks : 5
+          } 
+          
+    }
+ }
+
+
+ componentDidMount() {
+    /*this.setState({loading: true})
+    fetch("Question URL")
+        .then(response => response.json())
+        .then(data => {
+            this.setState({
+                loading: false,
+                testData: data         
+            })
+        })
+     */   
+}
+
+render() {
+    const Id       = this.state.loading ? "loading..." : this.state.Data.id
+    const Question = this.state.loading ? "loading..." : this.state.Data.question
+    const Marks   = this.state.loading ? "loading..." : this.state.Data.marks
+    
+    return (
+        <div>
+          <table bordered hover lg = {4}>
+           <thead>
+             <tr>
+               <th>ID</th>
+               <th>Questions</th>
+               <th>Marks</th>         
+             </tr>
+            </thead>
+       
+            <tbody>
+              <tr>
+                 <td>{Id}</td>
+                 <td>{Question}</td>
+                 <td>{Marks}</td>
+              </tr>
+            </tbody>
+          </table>      
+        </div>
+    )
+}
+}
+
 export default TestViewPage
