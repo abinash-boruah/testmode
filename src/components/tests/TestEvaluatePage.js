@@ -29,21 +29,15 @@ class TestEvaluatePage extends Component{
                 id : 1,
                 name : "Abinash",
                 score: 35,
-                evaluation : 'Evaluated'
              },
              {
                 id : 2,
-                name : "Hrishikesh",
-                score: 37,
-                evaluation : 'Evaluated'
-               
+                name : "Hrishikesh", 
              },
              {
                 id : 3,
                 name : "Kaushik",
-                score: 39,
-                evaluation : 'Evaluated'
-             
+                score: 39
              }
            ]
            this.setState({
@@ -58,7 +52,7 @@ class TestEvaluatePage extends Component{
             <div>
             <Row>
               <Col style = {{textAlign: "right"}}>
-                 Filter
+                 <h3>Filter</h3>
               </Col>  
               <Col xs lg = "auto">
                  <Dropdown>
@@ -86,13 +80,12 @@ class TestEvaluatePage extends Component{
                 </Col>
             </Row>
             <Row>
-                 <Table bordered hover lg = {4} style = {{marginTop:7,marginRight:7}}>
+                 <Table bordered hover lg = {4} style = {{marginTop: '7px' ,marginRight:'7px'}}>
                   <thead>
                      <tr>
                          <th>ID</th>
                          <th>Student Name</th>
                          <th>Score</th>
-                         <th>Evaluation</th>
                          <th>Check</th>         
                      </tr>
                    </thead>
@@ -101,8 +94,7 @@ class TestEvaluatePage extends Component{
                        <tr>
                           <td>{s.id}</td>
                           <td>{s.name}</td>
-                          <td>{s.score}</td>
-                          <td>{s.evaluation}</td>
+                          <td>{s.score?s.score:"not evaluated"}</td>
                           <td><Button variant="primary">Re-Evaluate</Button></td>
                        </tr>
                      ))}

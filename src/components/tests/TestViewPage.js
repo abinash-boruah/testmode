@@ -55,7 +55,7 @@ render() {
     
     return (
         <div>
-          <Table bordered hover lg = {4}>
+          <Table bordered hover lg = {4} style ={{marginTop:"15px"}}>
            <thead>
              <tr>
                <th>ID</th>

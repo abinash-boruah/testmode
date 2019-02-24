@@ -1,11 +1,87 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { Link } from "react-router-dom";
-import Container from 'react-bootstrap/Container'
 import Table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
+import ToggleButton from 'react-bootstrap/ToggleButton'
+import ButtonGroup from 'react-bootstrap/ToggleButtonGroup'
+
+class TestsPage extends Component{
+ constructor(){
+    super()
+    this.state = {
+        TestData : []
+    }
+ }
 
 
-const Tests = ({ match }) => (
+ componentDidMount() {
+   /*
+    fetch("URL")
+        .then(response => response.json())
+        .then(data => {
+            this.setState({
+                questions: data         
+            })
+        })*/
+    // answer types: text, multiple
+    let data = [
+      {
+       id : 1,
+       name : "Test 1",
+       toggle : true
+      },
+      {
+       id : 2,
+       name : "Test 2",
+       toggle : true
+      },
+      {
+       id : 3,
+       name : "Test 3",
+       toggle :true
+      }
+    ]
+    this.setState({
+        TestData: data         
+    })
+}
+
+render() {
+    const testData = this.state.TestData
+    
+    return (
+        <div>
+          <Table bordered hover lg = {4}>
+           <thead>
+             <tr>
+               <th>ID</th>
+               <th>Name</th>
+               <th>Enable/Disable</th>
+               <th>Modify</th>         
+             </tr>
+            </thead>
+       
+            <tbody>
+              {testData.map(t=>(
+                <tr>
+                   <td>{t.id}</td>
+                   <td><Link to="/test/asdasd">{t.name}</Link></td>
+                   <td>
+                   </td>
+                   <td><Button variant="primary">Edit</Button> <Button variant="danger">Delete</Button></td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>      
+        </div>
+    )
+}
+}
+
+export default TestsPage
+
+
+/*const Tests = ({ match }) => (
     <Container>
       <h2>Tests</h2>
       <Table  bordered hover size="sm">
@@ -13,8 +89,8 @@ const Tests = ({ match }) => (
         <tr>
          <th>ID</th>
          <th>Name</th>
-         <th>Status</th>
          <th>Modify</th>
+         <th>Toggle</th>
         </tr>
        </thead>
        <tbody>
@@ -41,4 +117,4 @@ const Tests = ({ match }) => (
     </Container>
 );
 
-export default Tests
+export default Tests*/
