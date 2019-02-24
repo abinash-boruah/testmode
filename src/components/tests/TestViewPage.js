@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
 import Table from 'react-bootstrap/Table'
 import Container from 'react-bootstrap/Container'
-import table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
 import {Link} from 'react-router-dom' 
 import Row from 'react-bootstrap/Row'
@@ -11,39 +10,52 @@ class TestViewPage extends Component{
  constructor(){
     super()
     this.state = {
-        loading : false,
-        Data :
-          {
-            id : 1,
-           question : "What is your name?",
-           marks : 5
-          } 
-          
+        questions : []
     }
  }
 
 
  componentDidMount() {
-    /*this.setState({loading: true})
-    fetch("Question URL")
+   /*
+    fetch("URL")
         .then(response => response.json())
         .then(data => {
             this.setState({
-                loading: false,
-                testData: data         
+                questions: data         
             })
-        })
-     */   
+        })*/
+    // answer types: text, multiple
+    let data = [
+      {
+       id : 1,
+       question : "What is your name?",
+       answer: { type: 'text' },
+       marks : 5
+      },
+      {
+       id : 2,
+       question : "What is your food?",
+       answer: { type: 'text' },
+       marks : 3
+      },
+      {
+       id : 3,
+       question : "What is your pame?",
+       answer: { type: 'text' },
+       marks : 2
+      }
+    ]
+    this.setState({
+        questions: data         
+    })
 }
 
 render() {
-    const Id       = this.state.loading ? "loading..." : this.state.Data.id
-    const Question = this.state.loading ? "loading..." : this.state.Data.question
-    const Marks   = this.state.loading ? "loading..." : this.state.Data.marks
+    const questions = this.state.questions
     
     return (
         <div>
-          <table bordered hover lg = {4}>
+          <Table bordered hover lg = {4}>
            <thead>
              <tr>
                <th>ID</th>
@@ -53,13 +65,15 @@ render() {
             </thead>
        
             <tbody>
-              <tr>
-                 <td>{Id}</td>
-                 <td>{Question}</td>
-                 <td>{Marks}</td>
-              </tr>
+              {questions.map(q=>(
+                <tr>
+                   <td>{q.id}</td>
+                   <td>{q.question}</td>
+                   <td>{q.marks}</td>
+                </tr>
+              ))}
             </tbody>
-          </table>      
+          </Table>      
         </div>
     )
 }
