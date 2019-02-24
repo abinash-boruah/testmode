@@ -60,7 +60,8 @@ render() {
              <tr>
                <th>ID</th>
                <th>Questions</th>
-               <th>Marks</th>         
+               <th>Marks</th>
+               <th>Answer Type</th>         
              </tr>
             </thead>
        
@@ -70,6 +71,7 @@ render() {
                    <td>{q.id}</td>
                    <td>{q.question}</td>
                    <td>{q.marks}</td>
+                   <td>{q.answer.type}</td>
                 </tr>
               ))}
             </tbody>
