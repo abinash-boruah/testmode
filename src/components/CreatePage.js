@@ -8,12 +8,21 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import shortid from 'shortid'
 import Dropdown from 'react-bootstrap/Dropdown'
+import AddQuestions from './AddQuestions'
+
+
 
 const CreatePage = () => (
     <Container>
-      <h2>Create Test</h2>
       <Row>
-        <Col xs={3}>
+        <Col xs={4}>
+        <div style = {{ fontFamily:'Quicksand',
+                        boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+                        padding:'10px', 
+                        background:'white',
+                        marginTop:'20px',
+                        marginLeft:'20px',
+                        borderRadius:'10px'}}>
           <Form>
             <Form.Group controlId="formBasicEmail">
               <Form.Label size="sm">Test Name</Form.Label>
@@ -21,27 +30,22 @@ const CreatePage = () => (
               <Form.Label size="sm" style={{marginTop:"5px"}}>Creation Time</Form.Label>
               <Form.Control size="sm" disabled value={Date.now()} />
               <Form.Label size="sm" style={{marginTop:"5px"}}>TestID</Form.Label>
-              <Form.Control size="sm" value={shortid.generate()} />
+              <Form.Control size="sm" value={shortid.generate()} /> 
+              <Button variant="primary" className="rd-button" style={{ width:"75%", margin:"10px"}}>Add Question</Button>
+              <Button variant="success" style={{marginTop:"30px",width:"75%", margin:"10px"}} className ="reverse-rd-button">Save Test</Button>   
            </Form.Group>
         </Form>
+        </div>
         </Col>
         <Col> 
-          <Form>
-          <Form.Label size ="sm">Question</Form.Label>
-          <Form.Control as="textarea" size="lg" placeholder=" " />      
-          </Form>
-          <Dropdown>
-            <Dropdown.Toggle variant="primary" id="dropdown-basic" style ={{marginTop:"6px"}}>
-              Answer Type
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-2">Text</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Multiple Choice</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          <Button variant="primary" style={{marginTop:"6px"}}>Add Question</Button><Button variant="success" style={{marginTop:"7px",marginLeft:'70%'}}>Save Test</Button>
-        </Col>     
-      </Row>
+              <AddQuestions/>
+        </Col>        
+        </Row>
+        <Row>
+          <Col>
+          
+          </Col>
+        </Row>
     </Container>
 );
 export default CreatePage

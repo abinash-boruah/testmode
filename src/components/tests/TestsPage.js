@@ -50,9 +50,14 @@ render() {
     const testData = this.state.TestData
     
     return (
-        <div>
-          <Table bordered hover lg = {4}>
-           <thead>
+        <div style ={{ background:'white',
+                       padding:'7px',
+                       margin:"20px",
+                       boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+                       borderRadius:'10px',
+                       fontFamily:'Quicksand'}}>
+          <Table bordered hover lg = {4} >
+           <thead style={{fontFamily:'Montserrat'}}>
              <tr>
                <th>ID</th>
                <th>Name</th>
@@ -68,7 +73,7 @@ render() {
                    <td><Link to="/test/asdasd">{t.name}</Link></td>
                    <td>
                    </td>
-                   <td><Button variant="primary">Edit</Button> <Button variant="danger">Delete</Button></td>
+                   <td><Button className='rd-button'>Edit</Button> <Button className='reverse-rd-button'>Delete</Button></td>
                 </tr>
               ))}
             </tbody>

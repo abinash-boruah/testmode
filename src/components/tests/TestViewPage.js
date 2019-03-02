@@ -54,7 +54,10 @@ render() {
     const questions = this.state.questions
     
     return (
-        <div>
+        <div style={{ boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+                      background:'white',
+                      borderRadius:'10px',
+                      padding:'10px'}}>
           <Table bordered hover lg = {4} style ={{marginTop:"15px"}}>
            <thead>
              <tr>

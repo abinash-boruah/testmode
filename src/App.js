@@ -16,13 +16,13 @@ import NavBar from './components/NavBar'
 
 class App extends Component {
   render() {
-    return (
+    return (<div>
         <Router>
           <Row style={{margin: '0'}}>
             <Col xs={2} style={{ padding: '0'}}>
               <SideBar/>
             </Col>
-            <Col xs={10} style={{ padding: '0'}}>
+            <Col xs={10} style={{ padding: '0', background:'#F1F2EB'}}>
               <NavBar/> 
               <Route exact path="/" component={Home} />
               <Route path="/tests" component={Tests} />
@@ -31,6 +31,7 @@ class App extends Component {
             </Col>
           </Row>
         </Router>
+        </div>
     );
   }
 }

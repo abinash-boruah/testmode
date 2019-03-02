@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Quicksand');
+
+.rd-navbar {
+    background: #FF4C5D;
+    padding: 0;
+}
+
+.rd-navbar a {
+ text-transform: uppercase;
+ font-family: Quicksand;
+ display: block;
+ overflow: hidden;
+ padding: 1em 1rem; 
+ color: white;
+}
+
+.rd-navbar a:hover {
+    background-color: rgb(212, 34, 52);
+    text-decoration: none;
+
+   }
+
+
+.rd-button {
+    background: rgb(22, 8, 47);
+    color: #fff;
+    border-color: transparent;
+}
+
+.rd-button:hover {
+    background: rgb(255, 76, 93);
+    color: #fff;
+    border-color: transparent;
+}
+.tbl-btn {
+    margin-right: 1em;
+}
+
+.shadow{
+    box-shadow:  5px 10px #888888;
+}
+.reverse-rd-button {
+    background: rgb(255, 76, 93);
+    color: #fff;
+    border-color: transparent;
+}
+.reverse-rd-button:hover {
+    background: rgb(22, 8, 47);
+    color: #fff;
+    border-color: transparent;
+}

@@ -56,7 +56,7 @@ class TestEvaluatePage extends Component{
               </Col>  
               <Col xs lg = "auto">
                  <Dropdown>
-                     <Dropdown.Toggle variant="success" id="dropdown-basic">
+                     <Dropdown.Toggle id="dropdown-basic" className='rd-button'>
                         Class
                      </Dropdown.Toggle>
                         <Dropdown.Menu>
@@ -68,7 +68,7 @@ class TestEvaluatePage extends Component{
                </Col>
                <Col xs lg = "3">
                  <Dropdown>
-                     <Dropdown.Toggle variant="success" id="dropdown-basic">
+                     <Dropdown.Toggle id="dropdown-basic" className ='rd-button'>
                       Year
                      </Dropdown.Toggle>
                      <Dropdown.Menu>
@@ -80,7 +80,7 @@ class TestEvaluatePage extends Component{
                 </Col>
             </Row>
             <Row>
-                 <Table bordered hover lg = {4} style = {{marginTop: '7px' ,marginRight:'7px'}}>
+                 <Table bordered hover lg = {4} style = {{background:'white',marginTop: '7px' ,marginRight:'7px',boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)' }}>
                   <thead>
                      <tr>
                          <th>ID</th>
@@ -95,7 +95,7 @@ class TestEvaluatePage extends Component{
                           <td>{s.id}</td>
                           <td>{s.name}</td>
                           <td>{s.score?s.score:"not evaluated"}</td>
-                          <td><Button variant="primary">Re-Evaluate</Button></td>
+                          <td><Button className='rd-button'>Re-Evaluate</Button></td>
                        </tr>
                      ))}
                    </tbody>

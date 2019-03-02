@@ -50,10 +50,14 @@ class Test extends Component {
   render() {
     const match = this.props.match
     return (
-    <Container fluid={true} style={{marginTop:"13px"}}>
+    <Container fluid={true} style={{marginTop:"20px"}}>
       <Row>
       <Col xs={3}>
-       <ListGroup as="ul" style={{ marginTop: '1em' }} defaultActiveKey = "/" > 
+       <ListGroup as="ul" style={{ marginTop: '0',
+        boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)' ,
+        borderRadius:'10px',
+        padding:'10px',
+        background:'white'}} defaultActiveKey = "/" > 
         <ListItem func={this.handlePageType} pageType={tabs[0]} text="View"></ListItem>  
         <ListItem func={this.handlePageType} pageType={tabs[1]} text="Edit"></ListItem>  
         <ListItem func={this.handlePageType} pageType={tabs[2]} text="Evaluate"></ListItem>
@@ -69,5 +73,6 @@ class Test extends Component {
     )
   }
 }
+//  {JSON.stringify(match)}
 //<h3>{ match.params.testid }</h3>
 export default Test
