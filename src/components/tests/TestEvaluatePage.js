@@ -49,7 +49,7 @@ class TestEvaluatePage extends Component{
            const studentData = this.state.studentData
            
            return (
-            <div>
+            <div >
             <Row>
               <Col style = {{textAlign: "right"}}>
                  <h3>Filter</h3>
@@ -80,7 +80,13 @@ class TestEvaluatePage extends Component{
                 </Col>
             </Row>
             <Row>
-                 <Table bordered hover lg = {4} style = {{background:'white',marginTop: '7px' ,marginRight:'7px',boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)' }}>
+              <div style={{background:'white',
+                borderRadius:'10px',
+                padding:'10px',
+                width:'100%',
+                margin:'10px',
+                boxShadow:'0 4px 8px 0 rgba(0,0,0,0.2)'}}>
+                 <Table bordered hover lg = {4} >
                   <thead>
                      <tr>
                          <th>ID</th>
@@ -100,6 +106,7 @@ class TestEvaluatePage extends Component{
                      ))}
                    </tbody>
                  </Table>
+                 </div>
             </Row>       
            </div>
            )

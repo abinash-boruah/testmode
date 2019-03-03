@@ -33,7 +33,6 @@ class SideBar extends Component {
           <Link style={{ padding: '.5rem 1rem', 
           color: '#FF4C5D', 
           fontFamily:'Montserrat', 
-          align:'right'
           }} to="/"><h6>TEST MODE</h6></Link>
  
        </Nav>

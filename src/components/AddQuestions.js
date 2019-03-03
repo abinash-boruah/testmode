@@ -8,17 +8,20 @@ import Dropdown from 'react-bootstrap/Dropdown'
 class AddQuestions extends Component {
 render(){
  return(
-    <div style ={{borderRadius:'7px',margin :"20px", background:"white", boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)'}}>
+    <div style ={{borderRadius:'7px',
+    margin :"20px", 
+    background:"white", 
+    boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)'}}>
         <Row>
         <Col>    
         <Form style = {{padding:'20px'}}>
           <Form.Label style ={{fontFamily:'Montserrat'}}><h2>Question</h2></Form.Label>
           <Form.Control as="textarea" size="lg" placeholder=" "/>      
           </Form>
-        </Col>
+          </Col>
         <Col md = "auto"> 
         <Dropdown>
-             <Dropdown.Toggle id="dropdown-basic" style ={{margin:"10px"}} className = "rd-button">
+             <Dropdown.Toggle id="dropdown-basic" style ={{marginTop:"15px",marginLeft:"10px"}} className = "rd-button">
                Answer Type
              </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -32,7 +35,7 @@ render(){
           <Form.Control type="email" placeholder="" />
           </Form.Group>
            </Form>
-           <Button className='reverse-rd-button' style ={{margin:"10px"}}>Delete</Button>
+           <Button className='reverse-rd-button' style ={{marginBottom:"15px",marginLeft:"10px"}}>Delete</Button>
         </Col>  
         </Row> 
     </div>                

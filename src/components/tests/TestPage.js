@@ -11,7 +11,7 @@ const tabs = ["view","edit","evaluate"]
 
 const ListItem = ({func, text, pageType}) => (
   <ListGroup.Item 
-    style={{ borderRadius: '0'}}
+    style={{ borderRadius: '0',}}
     as="li"
     action
     onClick={()=>func(pageType)}
@@ -57,7 +57,9 @@ class Test extends Component {
         boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)' ,
         borderRadius:'10px',
         padding:'10px',
-        background:'white'}} defaultActiveKey = "/" > 
+        background:'white',
+    
+        }} defaultActiveKey = "/" > 
         <ListItem func={this.handlePageType} pageType={tabs[0]} text="View"></ListItem>  
         <ListItem func={this.handlePageType} pageType={tabs[1]} text="Edit"></ListItem>  
         <ListItem func={this.handlePageType} pageType={tabs[2]} text="Evaluate"></ListItem>

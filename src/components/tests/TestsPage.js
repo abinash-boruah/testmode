@@ -52,7 +52,9 @@ render() {
     return (
         <div style ={{ background:'white',
                        padding:'7px',
-                       margin:"20px",
+                       marginTop:'20px',
+                       marginLeft:'150px',
+                       marginRight:'150px',
                        boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
                        borderRadius:'10px',
                        fontFamily:'Quicksand'}}>
