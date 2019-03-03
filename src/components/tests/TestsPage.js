@@ -57,8 +57,9 @@ render() {
                        marginRight:'150px',
                        boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
                        borderRadius:'10px',
-                       fontFamily:'Quicksand'}}>
-          <Table bordered hover lg = {4} >
+                       fontFamily:'Quicksand'
+                       }}>
+          <Table hover lg = {4} >
            <thead style={{fontFamily:'Montserrat'}}>
              <tr>
                <th>ID</th>
@@ -72,7 +73,7 @@ render() {
               {testData.map(t=>(
                 <tr>
                    <td>{t.id}</td>
-                   <td><Link to="/test/asdasd">{t.name}</Link></td>
+                   <td><Link to="/test/asdasd" style={{color:'black'}}>{t.name}</Link></td>
                    <td>
                    </td>
                    <td><Button className='rd-button'>Edit</Button> <Button className='reverse-rd-button'>Delete</Button></td>

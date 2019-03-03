@@ -28,19 +28,19 @@ class TestViewPage extends Component{
     let data = [
       {
        id : 1,
-       question : "What is your name?",
+       question : "What is a Software",
        answer: { type: 'text' },
        marks : 5
       },
       {
        id : 2,
-       question : "What is your food?",
+       question : "What is the capital of Kerala?",
        answer: { type: 'text' },
        marks : 3
       },
       {
        id : 3,
-       question : "What is your pame?",
+       question : "Where was carrom originated?",
        answer: { type: 'text' },
        marks : 2
       }
@@ -58,7 +58,7 @@ render() {
                       background:'white',
                       borderRadius:'10px',
                       padding:'10px'}}>
-          <Table bordered hover lg = {4} style ={{marginTop:"15px"}}>
+          <Table hover lg = {4} style ={{marginTop:"15px"}}>
            <thead>
              <tr>
                <th>ID</th>

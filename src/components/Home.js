@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Heading from './Heading'
 import CardDeck from 'react-bootstrap/CardDeck'
+import Button from 'react-bootstrap/Button'
 
 
 
@@ -12,7 +13,7 @@ const Home = () => (
 
      <div style ={{margin:"50px"}}>
       <Heading/>
-      <h3>Test Mode</h3>
+      <h3 style ={{fontFamily:'Montserrat'}}>Test Mode</h3>
       <CardDeck>
          <Card>
          <Card.Body>
@@ -40,7 +41,7 @@ const Home = () => (
     <Card.Body>
       <Card.Title>How to use Test Test Mode</Card.Title>
       <Card.Text>
-       34
+      <Button className='rd-button'>Click here</Button>
       </Card.Text>
     </Card.Body>
     <Card.Footer>

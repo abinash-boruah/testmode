@@ -13,6 +13,7 @@ import Home from './components/Home';
 import CreatePage from './components/CreatePage';
 import SideBar from './components/sidebar/SideBar';
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 class App extends Component {
   render() {

@@ -86,7 +86,7 @@ class TestEvaluatePage extends Component{
                 width:'100%',
                 margin:'10px',
                 boxShadow:'0 4px 8px 0 rgba(0,0,0,0.2)'}}>
-                 <Table bordered hover lg = {4} >
+                 <Table hover lg = {4} >
                   <thead>
                      <tr>
                          <th>ID</th>
